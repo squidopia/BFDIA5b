@@ -1,21 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BFDIA 5b Embed</title>
+  <!-- Import Google Font: Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base styles */
+    body {
+      margin: 0;
+      padding: 1rem;
+      font-family: 'Roboto', sans-serif;
+      background: #121212;
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 2.5rem;
+      text-align: center;
+      color: #ff6f61; /* some nice accent */
+      text-shadow: 0 0 8px #ff6f61aa;
+    }
+
+    p {
+      margin-top: 0.75rem;
+      font-size: 1rem;
+      color: #bbb;
+      text-align: center;
+    }
+
+    /* Responsive iframe container */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      aspect-ratio: 4 / 3; /* matches 800x600 ratio */
+      box-shadow: 0 0 15px #ff6f61aa;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: #000;
+    }
+  </style>
 </head>
 <body>
   <h1>Play BFDIA 5b!</h1>
 
-  <!-- Embed the game from the site -->
-  <iframe
-    src="https://www.play-games.com/emb/37684"
-    width="800"
-    height="600"
-    frameborder="0"
-    allowfullscreen
-  ></iframe>
+  <div class="iframe-container">
+    <iframe
+      src="https://zolo101.github.io/HTML5b/"
+      allowfullscreen
+      sandbox="allow-scripts allow-same-origin allow-forms"
+      title="BFDIA 5b Game"
+    ></iframe>
+  </div>
 
-  <p>If it doesn’t load, try clicking inside the iframe to start the game!</p>
+  <p>If it doesn’t load, try clicking inside the game frame to start playing!</p>
 </body>
 </html>
